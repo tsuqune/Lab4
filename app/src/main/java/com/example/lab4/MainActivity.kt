@@ -91,6 +91,7 @@ class MainActivity : AppCompatActivity() {
         } else {
             nextButton.visibility = View.INVISIBLE
             showFinalScore()
+            questionTextView.setText(R.string.congratulations_message)
         }
     }
 
@@ -111,12 +112,11 @@ class MainActivity : AppCompatActivity() {
             3 -> "Стыдно не знать, но да, это так"
             4 -> "Тут ошибочка на 100 лет"
             5 -> "четное + четное..."
-
-            else -> "Нет подсказки для этого вопроса"
+            else -> "..."
         }
 
         val toast = Toast.makeText(this, hintMessage, Toast.LENGTH_SHORT)
-        toast.setGravity(Gravity.TOP or Gravity.CENTER_HORIZONTAL, 0, 100)
+        toast.setGravity(Gravity.TOP, 0, 100)
         toast.show()
     }
 
