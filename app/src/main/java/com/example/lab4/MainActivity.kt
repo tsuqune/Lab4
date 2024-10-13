@@ -66,6 +66,7 @@ class MainActivity : AppCompatActivity() {
         nextButton.visibility = View.INVISIBLE
     }
 
+
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putInt("currentIndex", currentIndex)
